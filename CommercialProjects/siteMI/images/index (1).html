@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Металл-Инструмент</title>
+    <style>
+       body { 
+        font-family: Arial, sans-serif; 
+        line-height: 1.6; 
+        margin: 0; 
+        padding: 0;
+        background-color: #0c213b; 
+    }
+    .header { 
+        max-width: 1200px; 
+        margin: auto; 
+        padding: 5px 5px; 
+        background-image: linear-gradient(to bottom right, #1352a5, #0c213b); 
+        border-radius: 10px; 
+    }
+    .header h1, .header p { 
+        font-size: 50px; 
+        font-size: 24px; 
+    }
+
+    .metal-text {
+            color: #727272; /* Цвет текста */
+            font-size: 70px; /* Размер текста */
+            font-family: Arial, sans-serif; /* Шрифт текста */
+            text-shadow:
+                0 1px 0 #ccc,
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0, 0, 0, 1); /* Эффект тени для создания объема */
+        }
+    header, footer { 
+        background: #0d3364; 
+        color: #93cee5; 
+        padding: 20px 0; 
+        text-align: center; 
+    }
+    section { 
+        padding: 20px 0; 
+    }
+    .about, .products, .contacts { 
+        background-size: cover; 
+        background-position: center; 
+        margin-bottom: 30px; 
+    }
+    .about { 
+        background-image: url('https://github.com/Bev0802/siteMI/tree/main/images/startWork.webp'); 
+    }
+    .products { 
+        background-image: url('tools.webp'); 
+    }
+    .contacts { 
+        background-image: url('startWork.webp'); 
+        padding: 40px 20px;
+    }
+    .content { 
+        background-color: rgba(252, 251, 251, 0.8); 
+        padding: 20px; 
+        border-radius: 10px; 
+        color: #00080c; 
+        max-width: 800px; /* Установите максимальную ширину для контента */
+        margin: auto; /* Центрирование */
+    }
+
+        .h2{
+            font-size: 30px;
+            margin-bottom: 20px;}
+
+            /* Серый полупрозрачный фон */
+        a { color: #07609c; text-decoration: none; }
+
+        .menu { list-style: none; padding: 0; margin: 0; text-align: center; display: flex; justify-content: space-around; }
+        .menu li { margin: 0 10px; }
+        .menu li a { text-decoration: none; color: #b48c1e; }
+        .menu li a:hover { color: #4c84f3; }
+
+        .buttonsContainer {
+            display: flex;             */
+            flex-direction: column; /* Устанавливаем направление элементов в колонку */            
+            align-items: center; /* Центрируем кнопки по горизонтали */
+            padding: 20px 0;          
+          
+        }
+        .menuButton { color: #fafcfc; font-size: 15px;
+            background-color: #14496d; 
+            padding: 10px 20px; /* Увеличенный отступ для большего размера кнопок */
+            border: none; 
+            border-radius: 10px; 
+            cursor: pointer;
+            margin: 10px; /* Добавлен небольшой отступ вокруг кнопок */
+            flex: 1; /* Каждая кнопка займет равное пространство в контейнере */
+            text-align: center; /* Центрирование текста в кнопке */}
+            .menuButton:hover { background-color: #5476e6; color: #215e86; }
+            .dropdown { display: none; list-style: none; padding: 0; margin: 0; }
+            .dropdown li { margin: 5px 0; }
+            .dropdown li:hover { color: #144566; }
+            .dropdown li:hover { color: #a1c3d9; }
+            @media (max-width: 600px) {
+                .menu { display: block; }            
+        }    /* Дополнения к существующим стилям */
+   
+   
+
+       .google-map iframe { 
+            border-radius: 10px; 
+            width: 100%; 
+            max-width: 840px; 
+            height: 450px; 
+            margin: 20px auto; 
+            display: block; /* Центрирование */    
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="metal-text">Металл-Инструмент</div>
+            <p>Ваш надежный поставщик металлорежущего инструмента</p>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#about">О нас</a></li>                                          
+                    <li><a href="#productsSection">Продукция</a></li>                                    
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="content">
+            <h2>О нас</h2>
+                <p><h3>Надежный партнер в мире металлорежущего инструмента</h3>
+  
+                <p><strong>Более 20 лет</strong> мы поставляем высококачественный металлорежущий инструмент, помогая нашим клиентам добиваться безупречных результатов в обработке металлов.</p>
+                
+                <h3>Индивидуальный подход</h3>
+                
+                <p>Мы предлагаем широкий выбор инструментов, а также подбираем решения, <strong>соответствующие вашим</strong> конкретным <strong>потребностям</strong>.</p>
+                
+                <h3>Надежные партнеры</h3>
+                
+                <p>Сотрудничая с <strong>крупными заводами и предприятиями</strong>, мы отлаженно работаем как в закупке, так и в поставке инструмента.</p>
+                
+                <h3>Опыт и профессионализм</h3>
+                
+                <p>Наша команда <strong>высококвалифицированных специалистов</strong> обладает глубокими знаниями в области металлообработки. Мы <strong>разбираемся в сплавах</strong> и методах обработки металлов, поэтому всегда подберем для вас оптимальный инструмент.</p>
+                
+                <h3>Комплексные решения</h3>
+                
+                <p>Мы берем на себя <strong>все заботы</strong> по закупке, <strong>транспортировке</strong> и <strong>комплектации</strong> вашего заказа.</p>
+                
+                <h3>Гибкие условия сотрудничества</h3>
+                
+                <p>Мы работаем как по <strong>предоплате</strong>, так и с <strong>отсрочкой платежа**. <strong>Участвуем в тендерах**.
+                </p>
+                
+                <h3>Выбирая нас, вы получаете:</h3>
+                
+                <ul>
+                  <li>Надежного партнера с безупречной репутацией</li>
+                  <li>Индивидуальный подход к вашим потребностям</li>
+                  <li>Широкий выбор высококачественного инструмента</li>
+                  <li>Опытных специалистов, готовых помочь вам в любом вопросе</li>
+                  <li>Выгодные условия сотрудничества</li>
+                </ul>
+                
+                <h3>Доверьтесь профессионалам!</h3></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="productsSection">
+        <div class="buttonsContainer">            
+            <div class="content">
+                <h2>Наша продукция</h2>
+                <h3>Не просто инструмент - комплексные решения для вашего бизнеса</h3>
+  
+  <p>Более 8000 наименований - от предметов личной гигиены до двигателей - все, что вам нужно, в одном месте. Мы умеем качественно удовлетворять потребности клиентов</p>
+  
+  <p>В условиях сложной геополитической ситуации влияющей на рынок мы не можем фиксировать цены в прайсе. Узнать актуальную стоимость любого товара можно, отправив нам заявку.</p>
+    
+                        
+                <button class="menuButton" onclick="toggleDropdown('metalCutting')">Металлорежущий инструмент</button>
+                <ul class="dropdown" id="metalCutting">
+                    <li>Резцы</li>
+                    <li>Сверла</li>
+                    <li>Метчики</li>
+                    <li>Плашки</li>
+                    <li>Прочее</li>
+                </ul>
+                <button class="menuButton" onclick="toggleDropdown('locksmith')">Слесарно-монтажный инструмент</button>
+                <ul class="dropdown" id="locksmith">
+                    <li>Молотки</li>
+                    <li>Пилы</li>
+                    <li>Кувалды</li>
+                    <li>Прочее</li>
+                </ul>
+                <button class="menuButton" onclick="toggleDropdown('gardenConstruction')">Садово-строительный инструмент</button>
+                <ul class="dropdown" id="gardenConstruction">
+                    <li>Лопаты</li>
+                    <li>Плоскогубцы</li>
+                    <li>Триммеры</li>
+                    <li>Бензо и электро пилы</li>
+                    <li>Прочее</li>
+                </ul>
+                <button class="menuButton" onclick="toggleDropdown('measuring')">Измерительный инструмент</button>
+                <ul class="dropdown" id="measuring">
+                    <li>Микрометры</li>
+                    <li>Прочее</li>
+                </ul>
+                <button class="menuButton" onclick="toggleDropdown('abrasive')">Абразивный инструмент</button>
+                <ul class="dropdown" id="abrasive">
+                    <li>Круги</li>
+                    <li>Шкурка шлифовальная</li>
+                    <li>Прочее</li>
+                </ul>
+            <div>       
+        </div>
+    </section>    
+    
+    <section class="contacts" id="contacts"></section>
+        <div class="container">
+            <div class="content">           
+                <h2>Контакты</h2>
+                <p>Телефон: +7 (3412) 61-60-59, 61-42-02</p>
+                <p>Email: info@metal-ins.ru</p>
+                <p>Адрес: 426010, г.Ижевск, ул. Саранская, 1А, оф. 11</p>
+            </div>
+                    <div class="google-map">        
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2183.1839138278237!2d53.15906!3d56.8256339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e13eea9bdff6d5%3A0x43cd045336a67e40!2z0YPQuy4g0KHQsNGA0LDQvdGB0LrQsNGPLCAx0JAsINCY0LbQtdCy0YHQuiwg0YDQtdGB0L_Rg9Cx0LvQuNC60LAg0KPQtNC80YPRgNGC0LjRjywg0KDQvtGB0YHQuNGPLCA0MjYwMTA!5e0!3m2!1sru!2sse!4v1712353753938!5m2!1sru!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+            </div>       
+    </section>
+      
+        
+ 
+    <script>
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                dropdown.style.display = "block";
+            } else {
+                dropdown.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

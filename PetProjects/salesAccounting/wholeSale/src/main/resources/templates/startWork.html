@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Accounting: Start work</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="/static/style.css" th:href="@{/style.css}">
+    <script src="/static/script.js" th:src="@{/script.js}"></script>
+    <script src="/static/script.js" th:src="@{/static/script.js}"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="main-heading">Sales Accounting <br>  <span th:text="${organizationName}"></span> </h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="menu-block">
+                <h5>Закупка</h5>
+                <div class="mb-3">
+                    <!-- Используйте th:href для динамических ссылок магазин-->
+<!--                    <a th:href="@{/product/availableForPurchase/{organizationId}/{employeeId} <a th:href="@{/product/availableForPurchase/{organizationId}, employeeId=${employeeId})}" class="btn" title="открыть список Товаров контрагентов">Market</a>-->
+                    <a th:href="@{/organization/{organizationId}/employee/{employeeId}/product/availableForPurchase(organizationId=${organizationId}, employeeId=${employeeId})}" class="btn" title="Торговая площадка">Market</a>
+                    <a th:href="@{/organization/{organizationId}/employee/{employeeId}/orders/buyerList (organizationId=${organizationId}, employeeId=${employeeId})}" class="btn" title="Исходящие Заказы">Заказ поставщику</a>
+                    <a th:href="@{/organization/{organizationId}/employee/{employeeId}/product/}" class="btn" title="открыть список Платежное поручение">Платежное поручение исходящее</a>
+                    <a th:href="@{/organization/{organizationId}/employee/{employeeId}/documents/buyerList (organizationId=${organizationId}, employeeId=${employeeId})}" class="btn" title="открыть список Поступления">Поступления товаров</a>
+                </div>
+                <h5>Продажа</h5>
+                <div class="mb-3">
+                    <a th:href="@{/organization/{organizationId}/employee/{employeeId}/orders/sellerList (organizationId=${organizationId}, employeeId=${employeeId})}" class="btn" title="Входящие Заказы">Заказы клиентов</a>
+                    <a th:href="@{/organization/{organizationId}/employee/{employeeId}/product/}" class="btn" title="открыть список Платежное поручение">Платежное поручение входящее</a>
+                    <a th:href="@{/organization/{organizationId}/employee/{employeeId}/documents/sellerList (organizationId=${organizationId}, employeeId=${employeeId})}" class="btn" title="открыть список Реализаций">Реализация товаров</a>
+                </div>
+                <h5>Справочники</h5>
+                <div>
+                    <a th:href="@{/organization/{organizationId}/employee/{employeeId}/product/byOrganization/ (organizationId=${organizationId}, employeeId=${employeeId})}" class="btn" title="открыть список Номенклатуры">Номенклатура</a>
+                    <a th:href="@{/organization/{organizationId}/listCounterparty (organizationId=${organizationId})}" class="btn" title="открыть список Контрагентов">Контрагенты</a>
+                    <a th:href="@{/organization/{organizationId}/employee/listEmployees (organizationId=${organizationId})}" class="btn" title="открыть список Сотрудников">Сотрудники</a>
+                    <a th:href="@{/organization/{organizationId}/detailOrganization (organizationId=${organizationId})}" class="btn" title="изменение данных Организации">Организация</a>
+                </div>
+                <h5>Отчеты</h5>
+                <div>
+                    <a th:href="@{/organization/{organizationId}/employee/{employeeId}/documents/reportSale (organizationId=${organizationId}, employeeId=${employeeId})}" class="btn" title="сформировать Отчеты о продажах">Отчет о продажах</a>
+                    <a th:href="@{/organization/{organizationId}/employee/{employeeId}/documents/reportBuy (organizationId=${organizationId}, employeeId=${employeeId})}" class="btn" title="сформировать Отчеты о покупках">Отчет о покупках</a>
+                </div>
+                <dev>
+                <button type="button" class="bottom btn" onclick="window.location.href='/logout/exit'" title="выход из сеанса в форму входа">Выход</button>
+                <button type="button" class="bottom btn" onclick="window.location.href='/logout/close'" title="закрытие приложения">Закрыть</button>
+                </dev>
+            </div>
+        </div>
+            <div class="col-md-8">
+                <div class="form-container">
+                    <h3>Добро пожаловать,<br> <span th:text="${EmployeeName}">!</span></h3>
+                </div>
+                <div class="instruction-container">
+                    <h5 style="text-align: center;">Инструкция к меню программы</h5>
+                    <p>В меню слева отображаются разделы:</p>
+                    <ul>
+                        <li><strong>Закупка:</strong> включает торговую площадку, заказы поставщику, платёжные поручения и поступления товаров.</li>
+                        <li><strong>Продажа:</strong> включает заказы клиентов, входящие платёжные поручения и реализации товаров.</li>
+                        <li><strong>Справочники:</strong> содержит номенклатуру, контрагентов, сотрудников и данные организации.</li>
+                        <li><strong>Отчеты:</strong> предоставляет отчеты о продажах и покупках.</li>
+                        <p>Описание:</p>
+                        <p><strong>Market:</strong> торговая площадка в которую автоматически попадают товары созданные в справочнике <strong>Номенклатура</strong>.
+                            Там можно сформировать <strong>Заказ поставщику</strong>.</p>
+                            <p>Новые заказы попадают в <strong>Корзину</strong>, после подтверждения заказа, он автоматически появляется у поставщика в разделе <strong>Заказы клиентов</strong>,
+                            а у покупателя в разделе <strong>Заказы Поставщику</strong>.</p>
+                            <p>После оплаты Покупателем (раздел <strong>Платежные поручения</strong> находится разработке. В будущем будет сделана возможность загрузки/выгрузки <strong>Платежных поручений</strong> в Программу для ведения бух. учёта)
+                            продавец делает отгрузку и автоматически формируются документы продажи(также будет добавлена возможность загрузки/выгрузки документов и подписания электронной цифровой подписью, и возможность получения документа в формате exel и pdf),
+                            которые попадают у Покупателя в раздел <strong>Поступления товаров</strong>, а у Продавца в раздел <strong>Реализация товаров</strong>.</p>
+                                <p>Раздел <strong>Отчеты:</strong> Можно сформировать и посмотреть данные о продажах и покупках статистику по воспребанновти разных товаров.
+                                    И тенденцию продаж в разные периоды. Также можно вывести диаграмму на основании данных отчета (находится в разработке.)
+                                </p>
+                        <p><strong>Выход:</strong> выход к index.html для нового входа в систему.</p>
+                        <p>Закрыть: полное завершение приложения и выход на страницу gogle.</p>
+                    </ul>
+                    <p>Используйте соответствующие кнопки для перехода к нужным разделам.</p>
+                </div>
+
+                <br>
+
+            </div>
+    </div>
+</div>
+</body>
+</html>
