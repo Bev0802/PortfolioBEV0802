@@ -11,6 +11,21 @@ header {
     padding: 20px 0;
     text-align: center;
 }
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.profile-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .container {
     max-width: 1200px;
     margin: 50px auto;
