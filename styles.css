@@ -63,6 +63,7 @@ footer {
     transition: color 0.3s ease;
 }
 
+
 .contact-item a:hover {
     color: #a6d1ea; /* Цвет иконок при наведении */
 }
