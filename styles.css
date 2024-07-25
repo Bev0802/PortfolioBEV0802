@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #c5e4f6;
+    background-color: #78b6e9;
     color: #0c2e60;
 }
 header {
     background-color: #0c2e60;
-    color: #c5e4f6;
+    color: #78b6e9;
     padding: 20px 0;
     text-align: center;
 }
@@ -30,7 +30,7 @@ header {
     max-width: 1200px;
     margin: 50px auto;
     padding: 30px;
-    background-color: #8baed5;
+    background-color: #7abfff;
     box-shadow: 5px 5px 20px rgba(7, 2, 2, 0.7);
     border-radius: 15px;
 }
@@ -53,5 +53,16 @@ footer {
     text-align: center;
     padding: 20px 0;
     background-color: #0c2e60;
-    color: #c5e4f6;
+    color:  #78b6e9;
+}
+
+.contact-item a {
+    font-size: 15px; /* Увеличение размера шрифта иконок */
+    color: #0c2e60; /* Цвет иконок */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #a6d1ea; /* Цвет иконок при наведении */
 }
