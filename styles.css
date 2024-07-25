@@ -4,6 +4,12 @@ body {
     padding: 0;
     background-color: #78b6e9;
     color: #0c2e60;
+    background-image: url('img/GLNPPedWMAMi0Qz.jpeg');
+    background-size: cover; /* Это свойство помогает изображению занимать весь фон, сохраняя пропорции */
+    background-position: center; /* Центрирование изображения на фоне */
+    background-repeat: no-repeat; /* Избегание повторения изображения */
+    background-attachment: fixed; /* Фиксированный фон */
+
 }
 header {
     background-color: #0c2e60;
@@ -33,6 +39,8 @@ header {
     background-color: #85c3fc;
     box-shadow: 5px 5px 20px rgba(7, 2, 2, 0.7);
     border-radius: 15px;
+    opacity: 0.8; /* Прозрачность 50% */
+    color: #00080c;
 }
 .section {
     margin-bottom: 20px;
