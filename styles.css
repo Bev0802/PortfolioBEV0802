@@ -9,6 +9,7 @@ body {
     background-position: center; /* Центрирование изображения на фоне */
     background-repeat: no-repeat; /* Избегание повторения изображения */
     background-attachment: fixed; /* Фиксированный фон */
+    font-size: 18px;
 
 }
 header {
@@ -33,7 +34,7 @@ header {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 50px auto;
     padding: 30px;
     background-color: #85c3fc;
@@ -48,14 +49,16 @@ header {
 .section h2 {
     margin-top: 0;
 }
-.projects, .contact-info {
+.projects{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-.project, .contact-item {
+.project {
     flex: 1;
     min-width: 250px;
+
+
 }
 footer {
     text-align: center;
@@ -63,15 +66,68 @@ footer {
     background-color: #0c2e60;
     color:  #78b6e9;
 }
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-item {
+    flex: auto;
+    min-width: 150px;
+    max-width: 200px;
+    text-align: center;
+}
 
 .contact-item a {
-    font-size: 15px; /* Увеличение размера шрифта иконок */
-    color: #0c2e60; /* Цвет иконок */
+    font-size: 30px; /* Увеличение размера шрифта иконок */
+    color: #21329f; /* Цвет иконок */
     text-decoration: none;
     transition: color 0.3s ease;
+    min-width: 100px;
+    max-width: 300px;
 }
 
 
 .contact-item a:hover {
-    color: #a6d1ea; /* Цвет иконок при наведении */
+    color: #2879a6; /* Цвет иконок при наведении */
+}
+
+/* Стили для всплывающего окна */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: #1b265d;
+    color: #97beef;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Позиция всплывающего окна */
+    left: 50%;
+    margin-left: -80px; /* Отцентрирование */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Указывает на стрелку внизу */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
