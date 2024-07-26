@@ -1,6 +1,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    background-image: url('/img/startWork.png');
+    background-image: url('static/img/startWork.png');
     background-color: #041f3a; /* Темный фон для страницы */
     background-size: cover; /* Изображение будет покрывать всю доступную область */
     background-position: center; /* Центрируем изображение */
