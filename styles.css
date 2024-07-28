@@ -23,6 +23,7 @@ header {
     color: #78b6e9;
     padding: 20px 0;
     text-align: center;
+    /*border-radius: 15px;*/
 }
 
 .header-content {
@@ -39,6 +40,10 @@ header {
     object-fit: cover;
 }
 
+footer {
+    font-size: 12px;
+}
+
 .container {
     max-width: 1000px;
     margin: 50px auto;
@@ -48,6 +53,7 @@ header {
     border-radius: 15px;
     opacity: 0.8;
     color: #00000c;
+    text-align: justify; /* Выравнивание текста по ширине */
 }
 .section {
     margin-bottom: 20px;
@@ -65,11 +71,41 @@ header {
     min-width: 250px;
 }
 
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Добавляет горизонтальную прокрутку при необходимости */
+
+}
+/* Стилизация полосы прокрутки */
+::-webkit-scrollbar {
+    width: 1px; /* Ширина вертикальной полосы прокрутки */
+    height: 16px; /* Высота горизонтальной полосы прокрутки */
+}
+
+/* Стилизация дорожки полосы прокрутки */
+::-webkit-scrollbar-track {
+    background: #a1d4f8; /* Цвет фона дорожки */
+    border-radius: 10px; /* Радиус закругления дорожки */
+}
+
+/* Стилизация бегунка полосы прокрутки */
+::-webkit-scrollbar-thumb {
+    background-color: #0c2e60; /* Цвет бегунка */
+    border-radius: 10px; /* Радиус закругления бегунка */
+    border: 3px solid #85c3fc; /* Обводка бегунка, чтобы добавить пространство вокруг */
+}
+
+/* Стилизация бегунка при наведении */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #21329f; /* Цвет бегунка при наведении */
+}
+
 table {
     /*width: 100%;*/
     min-width: 200px;
     border-collapse: collapse;
     margin-bottom: 20px;
+    background-color: #f2f2f2;
 }
 
 th, td {
@@ -83,8 +119,12 @@ th {
     color: #78b6e9;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+/*tr:nth-child(even) {*/
+/*    background-color: #f2f2f2;*/
+/*}*/
+tr:hover {
+    background-color: #5987c7;
+    color: #f2f2f2;
 }
 
 .diploma-modal {
