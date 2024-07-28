@@ -65,9 +65,36 @@ footer {
     flex-wrap: wrap;
     gap: 20px;
 }
-.project {
-    flex: 1;
-    min-width: 250px;
+/*.project {*/
+/*    !*flex: 1;*!*/
+/*    min-width: 250px;*/
+/*}*/
+
+.project h4 {
+    color: #0c2e60;
+    margin-bottom: 10px;
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project a {
+    color: #21329f;
+    text-decoration: none;
+}
+
+.project a:hover {
+    color: #2879a6;
+}
+
+.project ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.project ul li {
+    margin-bottom: 5px;
 }
 
 .table-container {
