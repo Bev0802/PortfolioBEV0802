@@ -9,11 +9,10 @@ body {
     background-position: center; /* Центрирование изображения на фоне */
     background-repeat: no-repeat; /* Избегание повторения изображения */
     background-attachment: fixed; /* Фиксированный фон */
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.3px;
 }
-
 p {
     text-indent: 20px; /* Отступ первой строки абзаца */
 }
@@ -106,6 +105,8 @@ table {
     border-collapse: collapse;
     margin-bottom: 20px;
     background-color: #f2f2f2;
+    font-size: 15px;
+
 }
 
 th, td {
