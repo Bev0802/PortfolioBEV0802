@@ -16,7 +16,7 @@ body {
 p {
     text-indent: 20px; /* Отступ первой строки абзаца */
 }
-
+/** region Header */
 header {
     background-color: #0c2e60;
     color: #78b6e9;
@@ -38,11 +38,46 @@ header {
     border-radius: 50%;
     object-fit: cover;
 }
+/** endregion */
+
+/** region Main */
+.main-nav {
+    background-color: #0c2e60;
+    overflow: hidden;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    display: inline;
+}
+
+.main-nav a {
+    display: block;
+    color: #9ec7e8;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.main-nav a:hover {
+    background-color: #9ec7e8;
+    color: #0c2e60;
+}
+/** endregion */
+
 
 footer {
     font-size: 12px;
 }
-
+/** region body */
 .container {
     max-width: 1000px;
     margin: 50px auto;
@@ -100,11 +135,11 @@ footer {
 .table-container {
     width: 100%;
     overflow-x: auto; /* Добавляет горизонтальную прокрутку при необходимости */
-
+    border-radius: 10px; /* Радиус закругления */
 }
 /* Стилизация полосы прокрутки */
 ::-webkit-scrollbar {
-    width: 1px; /* Ширина вертикальной полосы прокрутки */
+    width: 16px; /* Ширина вертикальной полосы прокрутки */
     height: 16px; /* Высота горизонтальной полосы прокрутки */
 }
 
@@ -133,7 +168,7 @@ table {
     margin-bottom: 20px;
     background-color: #f2f2f2;
     font-size: 15px;
-
+    border-radius: 10px;
 }
 
 th, td {
@@ -270,3 +305,4 @@ footer {
     visibility: visible;
     opacity: 1;
 }
+/** endregion */
