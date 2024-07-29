@@ -22,7 +22,7 @@ header {
     color: #78b6e9;
     padding: 20px 0;
     text-align: center;
-    /*border-radius: 15px;*/
+    background: linear-gradient(to top  right, #0f3b7a, #00050c);
 }
 
 .header-content {
@@ -45,6 +45,7 @@ header {
 .main-nav {
     background-color: #0c2e60;
     overflow: hidden;
+    background: linear-gradient(to top  left, #1352a6, #00050c);
 }
 
 .main-nav ul {
@@ -77,6 +78,7 @@ header {
 
 footer {
     font-size: 12px;
+    background: linear-gradient(to top  right, #1853a8, #02132a);
 }
 /** region body */
 .container {
@@ -90,9 +92,11 @@ footer {
     color: #00000c;
     text-align: justify; /* Выравнивание текста по ширине */
 }
+
 .section {
     margin-bottom: 20px;
 }
+
 .section h2 {
     margin-top: 0;
 }
@@ -181,6 +185,7 @@ th, td {
 th {
     background-color: #0c2e60;
     color: #78b6e9;
+
 }
 
 /*tr:nth-child(even) {*/
