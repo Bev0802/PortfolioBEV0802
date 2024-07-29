@@ -44,8 +44,9 @@ header {
 /** region Main */
 .main-nav {
     background-color: #0c2e60;
-    overflow: hidden;
     background: linear-gradient(to top  left, #1352a6, #00050c);
+    overflow: hidden;
+    overflow-x: auto;
 }
 
 .main-nav ul {
@@ -54,6 +55,7 @@ header {
     padding: 0;
     display: flex;
     justify-content: center;
+    overflow-x: auto;
 }
 
 .main-nav li {
@@ -144,8 +146,8 @@ footer {
 }
 /* Стилизация полосы прокрутки */
 ::-webkit-scrollbar {
-    width: 16px; /* Ширина вертикальной полосы прокрутки */
-    height: 16px; /* Высота горизонтальной полосы прокрутки */
+    width: 12px; /* Ширина вертикальной полосы прокрутки */
+    height: 12px; /* Высота горизонтальной полосы прокрутки */
 }
 
 /* Стилизация дорожки полосы прокрутки */
