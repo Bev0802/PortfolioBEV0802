@@ -65,3 +65,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Обновляем содержимое элемента на странице
     document.getElementById("visit-counter").textContent = `Number of visits: ${visitCount}`;
 });
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-7YCK5WMLN7');
