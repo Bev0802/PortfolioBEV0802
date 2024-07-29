@@ -46,3 +46,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Получаем текущее значение количества посещений из localStorage
+    let visitCount = localStorage.getItem("visitCount");
+
+    // Если значение отсутствует, устанавливаем его на 0
+    if (visitCount === null) {
+        visitCount = 0;
+    }
+
+    // Увеличиваем значение на 1
+    visitCount++;
+
+    // Сохраняем обновленное значение в localStorage
+    localStorage.setItem("visitCount", visitCount);
+
+    // Обновляем содержимое элемента на странице
+    document.getElementById("visit-counter").textContent = `Number of visits: ${visitCount}`;
+});
