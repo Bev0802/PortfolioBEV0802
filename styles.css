@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;    
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #78b6e9;
@@ -293,9 +293,10 @@ footer {
     z-index: 1;
     bottom: 125%; /* Позиция всплывающего окна */
     left: 50%;
-    margin-left: -80px; /* Отцентрирование */
+    transform: translateX(-50%); /* Отцентрирование */
     opacity: 0;
     transition: opacity 0.3s;
+    pointer-events: auto; /* Предотвращение взаимодействия мыши */
 }
 
 .tooltip .tooltiptext::after {
@@ -303,10 +304,10 @@ footer {
     position: absolute;
     top: 100%; /* Указывает на стрелку внизу */
     left: 50%;
-    margin-left: -5px;
+    transform: translateX(-50%);
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: #1b265d transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
