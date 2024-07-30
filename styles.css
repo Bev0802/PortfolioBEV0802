@@ -78,10 +78,7 @@ header {
 /** endregion */
 
 
-footer {
-    font-size: 12px;
-    background: linear-gradient(to top  right, #1853a8, #02132a);
-}
+
 /** region body */
 .container {
     max-width: 1000px;
@@ -247,7 +244,19 @@ footer {
     padding: 20px 0;
     background-color: #0c2e60;
     color:  #78b6e9;
+    font-size: 12px;
+    background: linear-gradient(to top  right, #1853a8, #02132a);
 }
+
+footer a {
+    color: #78b6e9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #a6d1ea;
+}
+
 .contact-info {
     display: flex;
     flex-wrap: wrap;
