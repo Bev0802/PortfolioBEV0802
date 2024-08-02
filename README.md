@@ -11,8 +11,8 @@ Welcome to my portfolio, PortfolioBEV0802. Here, you will find a collection of m
 - This project includes:
     - Various images used in the project (`images`)
     - Key HTML files (`index.html`, `metal-ins.jpg`, `startWork.webp`, `tools.jpg`, `tools.webp`)
-- Вы можете просмотреть исходники проекта на [GitHub](https://github.com/Bev0802/PortfolioBEV0802/tree/main/CommercialProjects/siteMI), также он размещен в интернете по адресу: https://www.metal-ins.ru c помощью BitLab.
-- Вы можете просмотреть исходники проекта на [GitHub](https://github.com/Bev0802/PortfolioBEV0802/tree/main/CommercialProjects/siteMI), также он размещен в интернете по адресу: https://www.metal-ins.ru c помощью BitLab.
+- Вы можете просмотреть исходники проекта на [GitHub](https://github.com/Bev0802/PortfolioBEV0802/tree/main/CommercialProjects/siteMI), также он размещен в интернете по адресу: https://www.metal-ins.ru c помощью GitLab Pages.
+
 
 ### Sales Accounting System
 - **Directory**: `salesAccounting`
