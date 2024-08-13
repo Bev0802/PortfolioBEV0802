@@ -25,25 +25,13 @@ public class TelegramBotConfig {
 
             @Override
             public String getBotUsername() {
-                return "bot_username"; // Замените на имя вашего бота
+                return "@bev0802_tictactoe_java_bot"; // Заменить на имя бота
             }
 
             @Override
             public String getBotToken() {
-                return "bot_token"; // Замените на токен вашего бота
+                return "7464652750:AAHEG0CVcIZkBmTBjrSE1rAsmKZhfun8Z0M"; // Заменить на токен бота
             }
         };
     }
-
-//    @Bean
-//    public void registerBot(TelegramLongPollingBot telegramBot) {
-//        try {
-//            Webhook webhook = new SomeWebhookImplementation();
-//            TelegramBotsApi telegramBotsApi = new TelegramBotsApi(SomeBotSessionClass, webhook);
-//
-//            telegramBotsApi.registerBot(telegramBot);
-//        } catch (TelegramApiException e) {
-//            e.printStackTrace();
-//        }
-//    }
 }
